@@ -43,7 +43,7 @@ class EmailConfig {
     public $gmail = array(
         'host' => 'ssl://smtp.gmail.com',
         'port' => 465,
-        'username' => 'sim.franc2@gmail.com',
+        'username' => 'emailecoletp2@gmail.com',
         'password' => 'GPSmap76cx',
         'transport' => 'Smtp'
     );
