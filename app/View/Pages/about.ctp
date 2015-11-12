@@ -14,8 +14,7 @@
             <li>Choisir electronics va retourner comme choix camera, audio et tv</li>    
         </ul>
     </li>   
-    <li>Autocomplete à trouver dans les produits dans le champs nom dans le add et edit.
-        Mettre un c vas renvoyer coca-cola et canon comme choix d'autocomplete.</li>
+    
     <li>Créer ou enregistrer un nouvel utilisateur envoie un email de validation de email.</li>
 </ul>
 <img src="http://www.databaseanswers.org/data_models/logistics_movements/images/shipment_logistics_model.gif">
