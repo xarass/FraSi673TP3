@@ -97,6 +97,8 @@ class DATABASE_CONFIG {
 	           $this->default['login']      = getenv("OPENSHIFT_MYSQL_DB_USERNAME");
 	           $this->default['password']   = getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
 	           $this->default['database']   = getenv("OPENSHIFT_APP_NAME");
+	           $this->default['datasource'] = 'Database/Mysql';
+	           $this->test['datasource']    = 'Database/Mysql';
 	           
 	       else:
 	           $this->default['host']       = 'localhost';
