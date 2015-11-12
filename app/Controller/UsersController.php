@@ -190,7 +190,7 @@ class UsersController extends AppController {
     }
 
     public function send_mail($recipient = null, $username = null, $id = null, $redirect = true) {
-        $link = array('controller' => 'users', 'action' => 'activate', $id . '-' . $password);
+        $link = array('controller' => 'users', 'action' => 'activate', $id);
         App::uses('CakeEmail', 'Network/Email');
         $mail = new CakeEmail('gmail');
         $mail->from('noreply@localhost.com')->to($recipient)->subject('Mail Confirm');
