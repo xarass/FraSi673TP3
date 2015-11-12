@@ -19,5 +19,4 @@
 </ul>
 <img src="http://www.databaseanswers.org/data_models/logistics_movements/images/shipment_logistics_model.gif">
 <a href="http://www.databaseanswers.org/data_models/logistics_movements/index.htm">Lien vers le site de l'image</a><br><br><br>
-<a href="https://github.com/simonfrancoeur/FraSi673TP2">Lien du github</a>
 </p>
