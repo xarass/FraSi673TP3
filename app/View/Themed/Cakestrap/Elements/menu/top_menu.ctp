@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button><!-- /.navbar-toggle -->
-        <?php echo $this->Html->Link(__('Home'), array('controller' => 'shipments', 'action' => 'index'), array('class' => 'navbar-brand')); ?>
+        <?php echo $this->Html->Link(__('MSC'), array('controller' => 'shipments', 'action' => 'index'), array('class' => 'navbar-brand')); ?>
     </div><!-- /.navbar-header -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
@@ -42,6 +42,7 @@
                     'controller' => 'pages',
                     'action' => 'display', 'about')
                 );
+                
                 ?>
             </li>
 
@@ -53,10 +54,18 @@ echo $this->I18n->flagSwitcher(array(
     'class' => 'languages',
     'id' => 'language-switcher'
 ));
+
 ?>
 
                 </ul>
+                
             </li>
+            <?php 
+echo $this->Html->link( 
+        $this->Html->image("logistics_inkscape_simple.svg", array('escape' =>false, 'height' => '50px'))
+        ,"http://" . $_SERVER['HTTP_HOST'] . $this->webroot . "pages/about",array('escapeTitle' => false,'title' => 'Page About'));
+?>
+             
         </ul><!-- /.nav navbar-nav -->
     </div><!-- /.navbar-collapse -->
 </nav><!-- /.navbar navbar-default -->

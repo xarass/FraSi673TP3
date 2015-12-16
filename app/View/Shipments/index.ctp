@@ -61,8 +61,8 @@
 
         <div class="shipments index">
 
-            <h2><?php echo __('Shipments'); ?></h2>
-
+            <h2><?php echo __('Shipments'); ?></h2>            
+           
             <div class="table-responsive">
                 <table cellpadding="0" cellspacing="0" class="table table-striped table-bordered">
                     <thead>

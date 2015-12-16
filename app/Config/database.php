@@ -66,9 +66,29 @@
  * flags =>
  * A key/value array of driver specific connection options.
  */
-class DATABASE_CONFIG {
+//Pour sqlite
+define('DEFAULT_DB', APP . DS . 'sqlite' . DS . 'default.sqlite');
+define('TEST_DB', APP . DS . 'sqlite' . DS . 'test.sqlite');
 
-	public $default = array(
+class DATABASE_CONFIG {
+    
+    public $default = array(
+        'datasource' => 'Database/Sqlite',
+        'persistent' => false,
+        'database' => DEFAULT_DB,
+        'prefix' => '',
+        //'encoding' => 'utf8',
+    );
+    
+    public $test = array(
+        'datasource' => 'Database/Sqlite',
+        'persistent' => false,
+        'database' => TEST_DB,
+        'prefix' => '',
+        //'encoding' => 'utf8',
+    );
+
+	/*public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' => '',
@@ -82,10 +102,11 @@ class DATABASE_CONFIG {
 	public $test = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => '',
-		'login' => '',
-		'password' => '',
-		'database' => '',
+		'host' => 'localhost',
+                //'port' => '3306',
+		'login' => 'root',
+		'password' => 'mysql',
+		'database' => 'logistics_test',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
@@ -107,5 +128,5 @@ class DATABASE_CONFIG {
 	           $this->default['password']   = 'mysql';
 	           $this->default['database']   = 'logistics';
 	       endif;
-	}
+	}*/
 }

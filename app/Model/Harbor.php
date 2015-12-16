@@ -100,7 +100,8 @@ public function processImageUpload($check=array()) {
 	if (!empty($check['filename']['tmp_name'])) {
 
 		// check file is uploaded
-		if (!is_uploaded_file($check['filename']['tmp_name'])) {
+		//if (!is_uploaded_file($check['filename']['tmp_name'])) {
+                if (!$this->is_uploaded_file($check['filename']['tmp_name'])) {
 			return FALSE;
 		}
 
@@ -110,7 +111,8 @@ public function processImageUpload($check=array()) {
 		// @todo check for duplicate filename
 
 		// try moving file
-		if (!move_uploaded_file($check['filename']['tmp_name'], $filename)) {
+		//if (!move_uploaded_file($check['filename']['tmp_name'], $filename)) {
+                if (!$this->move_uploaded_file($check['filename']['tmp_name'], $filename)) {
 			return FALSE;
 
 		// file successfully uploaded
@@ -121,6 +123,14 @@ public function processImageUpload($check=array()) {
 	}
 
 	return TRUE;
+}
+
+public function is_uploaded_file($tmp_name) {
+	return is_uploaded_file($tmp_name);
+}
+
+public function move_uploaded_file($from, $to) {
+	return move_uploaded_file($from, $to);
 }
 
 /**

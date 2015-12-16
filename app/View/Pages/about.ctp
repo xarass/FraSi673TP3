@@ -5,6 +5,7 @@
 <p>420-267 MO Développer un site Web et une application pour Internet.<br>
     Automne 2015, Collège Montmorency.<br><br><br>
     
+    <?php echo $this->Html->image("logistics_inkscape_simple.svg", array('escape' => false, 'height' => '250px')); ?>
 <ul>
     <li>Téléversement d'image à trouver dans les ports dans le add et edit, afficher dans view</li>
     <li>Liste liée à trouver dans les envois dans le add et edit.
