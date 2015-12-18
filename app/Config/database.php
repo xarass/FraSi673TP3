@@ -109,7 +109,7 @@ class DATABASE_CONFIG {
 		'database' => 'logistics_test',
 		'prefix' => '',
 		//'encoding' => 'utf8',
-	);
+	);*/
         
         public function __construct() {
                if (getenv("OPENSHIFT_MYSQL_DB_HOST")):
@@ -128,5 +128,5 @@ class DATABASE_CONFIG {
 	           $this->default['password']   = 'mysql';
 	           $this->default['database']   = 'logistics';
 	       endif;
-	}*/
+	}
 }

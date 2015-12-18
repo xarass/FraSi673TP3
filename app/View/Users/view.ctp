@@ -64,7 +64,6 @@
         <div class="users view">
 
             <h2><?php  echo __('User'); ?></h2>
-
             <div class="table-responsive">
                 <table class="table table-striped table-bordered">
                     <tbody>
@@ -95,12 +94,14 @@
                             </td>
                         </tr><tr>		<td><strong><?php echo __('Created'); ?></strong></td>
                             <td>
-			<?php echo h($user['User']['created']); ?>
+			<?php $created = $user['User']['created'];
+                                echo is_numeric($created) ? date("Y-m-d", $created) : h($created); ?>
                                 &nbsp;
                             </td>
                         </tr><tr>		<td><strong><?php echo __('Modified'); ?></strong></td>
                             <td>
-			<?php echo h($user['User']['modified']); ?>
+			<?php $modified = $user['User']['modified'];
+                                echo is_numeric($modified) ? date("Y-m-d", $modified) : h('modified'); ?>
                                 &nbsp;
                             </td>
                         </tr>					</tbody>
